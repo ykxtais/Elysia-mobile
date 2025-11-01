@@ -16,6 +16,7 @@
       "supportsTablet": true
     },
     "android": {
+      "useNextNotificationsApi": true,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0cb012"
@@ -29,7 +30,8 @@
       "expo-router",
       "expo-asset",
       "expo-font",
-      "expo-localization"
+      "expo-localization",
+      "expo-notifications"
     ]
   }
 }
