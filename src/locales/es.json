@@ -100,9 +100,6 @@
     "build": "Build",
     "commit": "Commit",
     "ambiente": "Entorno",
-    "links": "Enlaces",
-    "codigo": "Código fuente",
-    "privacidade": "Política de Privacidad",
     "rodape": "Gracias por usar nuestra app."
   }
 }

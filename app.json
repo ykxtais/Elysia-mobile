@@ -12,6 +12,12 @@
       "resizeMode": "contain",
       "backgroundColor": "#0cb012"
     },
+    "extra": {
+      "appName": "Elysia Mobile",
+      "appVersion": "1.0.0",
+      "buildNumber": "1",
+      "gitCommit": "e2c9a12"  
+    },
     "ios": {
       "supportsTablet": true
     },

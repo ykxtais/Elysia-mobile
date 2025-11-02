@@ -88,26 +88,7 @@ export default function Sobre() {
           )}
 
           <View style={styles.divider} />
-
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>{t('sobre.links')}</Text>
-            <View style={styles.buttons}>
-              {!!info.repoUrl && (
-                <TouchableOpacity style={styles.cta} onPress={() => Linking.openURL(info.repoUrl)}>
-                  <Feather name="github" size={18} color="#fff" />
-                  <Text style={styles.ctaText}>{t('sobre.codigo')}</Text>
-                </TouchableOpacity>
-              )}
-              {!!info.privacyUrl && (
-                <TouchableOpacity style={styles.link} onPress={() => Linking.openURL(info.privacyUrl)}>
-                  <AntDesign name="link" size={16} color={colors.text} />
-                  <Text style={styles.linkText}>{t('sobre.privacidade')}</Text>
-                </TouchableOpacity>
-              )}
-            </View>
-          </View>
         </View>
-
         <View style={styles.foot}>
           <Text style={styles.footText}>{t('sobre.rodape')}</Text>
         </View>
