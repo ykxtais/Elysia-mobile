@@ -10,6 +10,7 @@ import BtnTheme from '../components/BtnTheme';
 import Home from '../screens/Home';
 import Mapa from '../screens/Mapa';
 import Tecno from '../screens/Tecno';
+import Sobre from '../screens/Sobre';
 import MotoVaga from '../screens/MotoVaga'; 
 import Perfil from '../screens/Perfil';
 
@@ -20,6 +21,7 @@ function BottomBar({ navigation, current }) {
     { name: 'Home',     label: 'Home',        icon: 'home-outline',      iconActive: 'home' },
     { name: 'Mapa',     label: 'Mapa',        icon: 'map-outline',       iconActive: 'map' },
     { name: 'Tecno',    label: 'Tecnologia',  icon: 'code-outline', iconActive: 'code' },
+    { name: 'Sobre',   label: 'Sobre',      icon: 'ellipsis-horizontal-outline',    iconActive: 'ellipsis-horizontal'},
     { name: 'MotoVaga', label: 'MotoVaga',  icon: 'barcode-outline',   iconActive: 'barcode' },
     { name: 'Perfil',   label: 'Perfil',      icon: 'person-outline',    iconActive: 'person' },
   ];
@@ -49,24 +51,24 @@ function BottomBar({ navigation, current }) {
               paddingVertical: 6,
             }}
           >
-            <View style={{ flexDirection: 'row-reverse', alignItems: 'center' }}>
+          <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+             <Ionicons
+               name={active ? it.iconActive : it.icon}
+               size={20}
+                color={tint}
+                style={{ marginBottom: 4 }}
+              />
               <Text
                 style={{
                   color: tint,
-                  fontSize: 12,
+                 fontSize: 11, // um pouco menor pra caber 6 itens
                   fontWeight: active ? '800' : '600',
                 }}
-                numberOfLines={1}
-              >
+               numberOfLines={1}
+                >
                 {it.label}
               </Text>
-              <Ionicons
-                name={active ? it.iconActive : it.icon}
-                size={18}
-                color={tint}
-                style={{ marginLeft: 6 }}
-              />
-            </View>
+            </View>           
           </TouchableOpacity>
         );
       })}
@@ -129,6 +131,7 @@ export default function DrawerRoutes() {
       <Drawer.Screen name="Home" component={withBottomBar(Home, 'Home')} options={{ title: 'Home' }} />
       <Drawer.Screen name="Mapa" component={withBottomBar(Mapa, 'Mapa')} options={{ title: 'Mapa' }} />
       <Drawer.Screen name="Tecno" component={withBottomBar(Tecno, 'Tecno')} options={{ title: 'Tecnologia' }} />
+      <Drawer.Screen name="Sobre" component={withBottomBar(Sobre, 'Sobre')} options={{ title: 'Sobre' }} />
       <Drawer.Screen name="MotoVaga" component={withBottomBar(MotoVaga, 'MotoVaga')} options={{ title: 'MotoVaga' }} />
       <Drawer.Screen name="Perfil" component={withBottomBar(Perfil, 'Perfil')} options={{ title: 'Perfil' }} />
     </Drawer.Navigator>

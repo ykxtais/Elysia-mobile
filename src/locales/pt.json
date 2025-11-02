@@ -92,5 +92,17 @@
     "status": "Status",
     "numero": "Número",
     "patio": "Pátio"
+  },
+  "sobre": {
+    "subtitulo": "Inteligência para gestão de pátios",
+    "estavel": "Estável",
+    "versao": "Versão",
+    "build": "Build",
+    "commit": "Commit",
+    "ambiente": "Ambiente",
+    "links": "Links",
+    "codigo": "Código-fonte",
+    "privacidade": "Política de Privacidade",
+    "rodape": "Obrigado por usar nosso app."
   }
 }
