@@ -20,13 +20,13 @@ maior controle operacional.
 ## 🗂 Arquitetura
 ```
 src/
-  components/        # BtnContext, BtnLanguage.
+  components/        # BtnContext, BtnLanguage
   context/           # ThemeContext, LanguageContext
   firebase/          # firebaseConfig
   locales/           # pt, es
   notifications/     # notify
   routes/            # AppNavigator, Drawer.routes
-  screens/           # Home, Mapa, MotoVaga, Perfil, Perfil, Tecno              /auth/       # Login, Register
+  screens/           # Home, Mapa, MotoVaga, Perfil, Sobre, Tecno       /auth/       # Login, Register
   services/          # api, i18n, motoVagaApi
   utils/             # authErrors
 ```
