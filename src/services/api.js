@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "https://elysia-api.azurewebsites.net/api",
+  baseURL: "https://app-elysia-s4.azurewebsites.net/api",
   timeout: 15000,
 });
 
