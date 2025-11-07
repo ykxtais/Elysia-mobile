@@ -16,7 +16,11 @@
       "appName": "Elysia Mobile",
       "appVersion": "1.0.0",
       "buildNumber": "1",
-      "gitCommit": "e2c9a12"
+      "gitCommit": "e2c9a12",
+      "router": {},
+      "eas": {
+        "projectId": "a2c97ef8-0763-45c7-bb66-88266cff2185"
+      }
     },
     "ios": {
       "supportsTablet": true
