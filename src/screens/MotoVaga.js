@@ -3,7 +3,17 @@ import { View, Text, TextInput, TouchableOpacity, SectionList, StyleSheet, Alert
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useThemedStyles, useTheme } from '../context/ThemeContext';
 import { useLanguage } from '../context/LanguageContext';
-import { api } from '../services/api';
+import {
+  listMotos,
+  createMoto as createMotoSvc,
+  updateMoto as updateMotoSvc,
+  deleteMoto as deleteMotoSvc,
+
+  listVagas,
+  createVaga as createVagaSvc,
+  updateVaga as updateVagaSvc,
+  deleteVaga as deleteVagaSvc,
+} from '../services/motoVagaApi';
 
 function cardSkin(colors, kind) {
   if (kind === 'moto') return { bg: colors.secondary, fg: colors.onSecondary };
@@ -71,20 +81,17 @@ export default function MotoVaga() {
   const [openMoto, setOpenMoto] = useState(false);
   const [openVaga, setOpenVaga] = useState(false);
 
-  // dados / loading
   const [motos, setMotos] = useState([]);
   const [vagas, setVagas] = useState([]);
   const [loadingMoto, setLoadingMoto] = useState(false);
   const [loadingVaga, setLoadingVaga] = useState(false);
 
-  // edição/novo – Moto
   const [motoId, setMotoId] = useState(null);
   const [placa, setPlaca] = useState('');
   const [marca, setMarca] = useState('');
   const [modelo, setModelo] = useState('');
   const [ano, setAno] = useState('');
 
-  // edição/novo – Vaga
   const [vagaId, setVagaId] = useState(null);
   const [status, setStatus] = useState('');
   const [numero, setNumero] = useState('');
@@ -94,8 +101,7 @@ export default function MotoVaga() {
   const fetchMotos = useCallback(async () => {
     try {
       setLoadingMoto(true);
-      const res = await api.get('/moto');
-      const data = Array.isArray(res.data?.items) ? res.data.items : (res.data || []);
+      const data = await listMotos();
       setMotos(data);
     } catch (e) {
       Alert.alert('Erro', 'Não foi possível carregar as motos.');
@@ -105,23 +111,22 @@ export default function MotoVaga() {
   }, []);
 
   const createMoto = useCallback(async (body) => {
-    await api.post('/moto', body);
+    await createMotoSvc(body);
   }, []);
 
   const updateMoto = useCallback(async (id, body) => {
-    await api.put(`/moto/${id}`, body);
+    await updateMotoSvc(id, body);
   }, []);
 
   const deleteMoto = useCallback(async (id) => {
-    await api.delete(`/moto/${id}`);
+    await deleteMotoSvc(id);
   }, []);
 
   // API Vaga
   const fetchVagas = useCallback(async () => {
     try {
       setLoadingVaga(true);
-      const res = await api.get('/vaga');
-      const data = Array.isArray(res.data?.items) ? res.data.items : (res.data || []);
+      const data = await listVagas();
       setVagas(data);
     } catch (e) {
       Alert.alert('Erro', 'Não foi possível carregar as vagas.');
@@ -131,15 +136,15 @@ export default function MotoVaga() {
   }, []);
 
   const createVaga = useCallback(async (body) => {
-    await api.post('/vaga', body);
+    await createVagaSvc(body);
   }, []);
 
   const updateVaga = useCallback(async (id, body) => {
-    await api.put(`/vaga/${id}`, body);
+    await updateVagaSvc(id, body);
   }, []);
 
   const deleteVaga = useCallback(async (id) => {
-    await api.delete(`/vaga/${id}`);
+    await deleteVagaSvc(id);
   }, []);
 
   useEffect(() => { if (openMoto) fetchMotos(); }, [openMoto, fetchMotos]);
