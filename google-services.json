@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "467328459684",
+    "project_id": "elysiaauth",
+    "storage_bucket": "elysiaauth.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467328459684:android:9306cde80f1865cfa3d731",
+        "android_client_info": {
+          "package_name": "com.elysia.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1lWPkq3GAK7GTUXQelBmj3Hm3xPbkehc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
