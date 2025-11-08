@@ -55,7 +55,12 @@ npm run android
 ``` 
 - para testar no emulador
 
-</br>
+---
+
+## ✨ Baixe o aplicativo
+
+- APK: <a href="https://expo.dev/accounts/557553/projects/Elysia/builds/f799bf4c-1779-4335-856b-6c642e6d4d9f">App Elysia</a>
+> Observação: o APK foi distribuído via **Firebase App Distribution**. Para instalar, aceite  **instalar apps de fontes desconhecidas** no Android.
  
 ## ⟢ Integrantes
  
