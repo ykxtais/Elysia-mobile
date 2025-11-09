@@ -64,5 +64,5 @@ npm run android
  
 ## ⟢ Integrantes
  
-➤ Iris Tavares Alves 557728 </br>
-➤ Taís Tavares Alves 557553 </br>
+➤ Iris Tavares Alves 557728 <a href="https://github.com/Irissuu">github</a> </br>
+➤ Taís Tavares Alves 557553 <a href="https://github.com/ykxtais">github</a> </br>
